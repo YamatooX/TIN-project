@@ -195,7 +195,7 @@ div.mySlides{
 }
 
 div.mySlides img{
-  height: 80vh;
+  height: 70vh;
   width: auto;
 }
 
@@ -234,16 +234,15 @@ div.mySlides img{
   background-color: #000000;
   margin: 0 auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
   border: none;
 }
 
 .close {
   color: white;
   position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
+  top: 4vh;
+  right: 6vh;
   font-weight: bold;
 }
 

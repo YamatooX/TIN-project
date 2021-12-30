@@ -1,0 +1,311 @@
+@font-face {
+  font-family: 'allura' ;
+  src: local('Allura') url("/Allura-Regular.otf");
+  font-family: 'Almendra', sans-serif;
+}
+.mobile-first-component {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+   .mobile-first-component {
+      width: 50%;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .mobile-first-component {
+      width: 33%;
+   }
+}
+
+body{
+  background-image: url(../pictures/background.jpg);
+  font-family: 'Almendra';
+  font-size: 2em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+}
+
+#page{    
+  background-color: rgba(192, 192, 192, 0.74);
+    height: 100%;
+    width:auto;
+    opacity: 0.6;
+    z-index: 2;
+    position: absolute;
+}
+
+img{
+  height: 30vh;
+  width: auto;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+}
+
+/* Logo */
+
+#title > img{
+  border: 3px solid rgb(133, 131, 16);
+  border-radius: 50%;
+  width: auto;
+  height: 12vh;
+}
+
+/* Menu */
+ul {
+  list-style: none;
+  float: left;
+}
+
+ul > li {
+  margin: 0;
+  padding: 0;
+  float: left; 
+  position: relative;
+  height: auto;
+}
+
+ul > li > a {
+  padding: 3vh;
+  text-decoration: none;
+}
+
+ul > li > a:hover, 
+ul > li:hover > a {
+  color: rgb(196, 196, 196);
+  text-decoration: underline;
+}
+
+ul > li ul {
+  padding: 0;
+  position: absolute; 
+  display: none; 
+  left: 0px; 
+  top: 30px; 
+  width: 200px; 
+  text-align: left;
+  background-color: rgba(199, 18, 18, 0.507);
+  border: 1px solid #ccc;
+}
+
+ul li:hover > ul {
+  display: block;
+}
+
+ul > li ul ul {
+  left: 200px; 
+  top: -1px;
+}
+
+ul > li ul li {
+  margin: 0; 
+  padding: 0;
+  position: relative; 
+  float: none; 
+  height: auto;
+}
+
+ul > li ul li a {
+  padding: 10px 20px; 
+  color: #505050; 
+  text-decoration: none;
+  display: block;
+}
+
+ul > li ul li a:hover,
+ul > li ul li:hover > a {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(199, 18, 18, 0.507);
+}
+
+.menu li a{
+  color: #ff5252;
+}
+
+.menu li:hover a{
+  background: rgb(155, 34, 34, 0.5);
+  color: #fff;
+}
+
+/* Zawartość strony */
+
+
+#content{
+  clear: both;
+  height:100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#leftbox{
+  float: left;
+  width: 40vh;
+  height: 100%;
+}
+
+#leftbox > p{
+  clear: both;
+  width: 100%;
+  padding:15px;
+}
+
+#rightbox{
+  float: left;
+  height: 100%;
+  width: 40vh;
+  text-align: center;
+  padding:10px;
+  vertical-align:middle;
+}
+
+
+#rightbox > img{
+  border-radius: 50%;
+}
+
+#leftbox > img{
+  border-radius: 8%;
+  margin: 0 auto;
+  height: 45vh;
+}
+
+#content > .row > .column img{
+  border: 1px solid rgba(192, 192, 192, 0.74);
+  margin: 2px;
+  height: 60vh;
+}
+
+#facebook{
+  border-radius: 50%;
+}
+/* Slajdy */
+
+div.mySlides{
+  align-content: center;
+}
+
+div.mySlides img{
+  height: 80vh;
+  width: auto;
+}
+
+.column{
+  width: auto;
+  height: 100%;
+  float: left;
+}
+
+.row > .column {
+  vertical-align: middle;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content{
+  position: relative;
+  background-color: #000000;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  border: none;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides > img{
+    height: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev{
+  left: 0;
+}
+
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 18px 12px;
+  padding-left: 30px;
+  position: absolute;
+  top: 0;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
